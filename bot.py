@@ -17,23 +17,23 @@ CLAN_NAME = "Avera"
 CLAN_RULES = """
 **📜 Avera Clan Rules**
 
-1. **Be Respectful** — Treat all clan members with respect. No harassment, bullying, or hate speech.
-2. **No Begging** — Do not beg for items, GP, or boosts from other members.
-3. **Activity** — Stay reasonably active. Inactivity of 30+ days without notice may result in removal.
-4. **Clan Events** — Participation in clan events is encouraged! Show up and have fun.
-5. **Represent the Clan** — Wear the clan cape when online. Represent Avera with pride.
-6. **No Drama** — Keep personal drama out of clan chat. Sort disputes privately.
-7. **Have Fun!** — This is a game. Enjoy it! 🎮
+We like to keep it pretty relaxed here at Avera.
 
-*For questions, contact a Clan Admin.*
+1. Maintain respect for all members of the clan at all times
+2. Friendly banter is encouraged, drama and toxicity is not
+3. Do not scam, mislead, lure or disrespect other clan members
+4. Do not promote outside communities, clans or discords
+5. Abide by all rules set by discord and Jagex
+6. Most importantly, enjoy yourself
+
 """
 
 CLAN_INFO = """
 **⚔️ About Avera**
 
-Welcome to **Avera**, an Old School RuneScape clan built on friendship, fun, and gains!
+Welcome to **Avera**, We are a brand new clan established in March of 2026!
 
-🏰 **Focus:** PvM, Skilling, and Clan Events
+🏰 **Focus:** Creating an engaging environment for everyone to enjoy
 🌍 **World:** Ask an admin for our clan world!
 📅 **Events:** Held weekly — check #events for details
 💬 **Discord:** You're already here!

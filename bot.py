@@ -4061,6 +4061,34 @@ async def set_verify_date(ctx, member: discord.Member = None, *, date: str = Non
     )
 
 
+@bot.command(name="hiscoresdebug")
+@commands.has_permissions(manage_guild=True)
+async def hiscores_debug(ctx, *, rsn: str = None):
+    """Debug raw hiscores response to find EHP index. Admin only. Usage: !hiscoresdebug <rsn>"""
+    if not rsn:
+        rsn = verified_rsns.get(str(ctx.author.id))
+        if not rsn:
+            await ctx.send("❌ Provide an RSN or verify yours first.")
+            return
+
+    msg = await ctx.send(f"🔍 Fetching raw hiscores for **{rsn}**...")
+    try:
+        url = f"https://secure.runescape.com/m=hiscore_oldschool/index_lite.ws?player={rsn.replace(' ', '%20')}"
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, timeout=aiohttp.ClientTimeout(total=10)) as resp:
+                text = await resp.text()
+
+        lines = text.strip().split("\n")
+        # Print lines 48-56 where EHP tends to live
+        output = ""
+        for i, line in enumerate(lines):
+            if i >= 48 and i <= 56:
+                output += f"`Line {i}`: {line}\n"
+
+        await msg.edit(content=f"📊 Hiscores lines 48-56 for **{rsn}**:\n{output}")
+    except Exception as e:
+        await msg.edit(content=f"❌ Error: {e}")
+
 
 @bot.command(name="referral")
 async def referral(ctx, referrer: discord.Member = None):

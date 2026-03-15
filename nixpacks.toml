@@ -1,0 +1,39 @@
+[phases.setup]
+nixPkgs = [
+  "nss",
+  "nspr",
+  "atk",
+  "cups",
+  "dbus",
+  "expat",
+  "libdrm",
+  "libxcb",
+  "libxkbcommon",
+  "mesa",
+  "pango",
+  "cairo",
+  "alsa-lib",
+  "at-spi2-atk",
+  "at-spi2-core",
+  "xorg.libX11",
+  "xorg.libXcomposite",
+  "xorg.libXdamage",
+  "xorg.libXext",
+  "xorg.libXfixes",
+  "xorg.libXrandr",
+  "xorg.libxshmfence",
+  "xorg.libXcursor",
+  "xorg.libXi",
+  "xorg.libXtst",
+  "gtk3",
+  "glib",
+  "gdk-pixbuf",
+  "libuuid",
+]
+
+[phases.install]
+cmds = [
+  "pip install -r requirements.txt",
+  "python -m playwright install chromium",
+  "python -m playwright install-deps chromium",
+]
